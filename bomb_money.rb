@@ -55,13 +55,13 @@ class Tutorial < Gosu::Window
         @player.collect_coins(@coins)
         @player.collect_bombs(@bombs)
 
-        if rand(100) < 4 and @bills.size < 5
+        if rand(100) < 4 and @bills.size < 25
           @bills.push(Bill.new)
         end
-        if rand(30) < 4 and @coins.size < 3
+        if rand(30) < 4 and @coins.size < 25
           @coins.push(Coin.new)
         end
-        if rand(100) < 4 and @bombs.size < 4
+        if rand(100) < 4 and @bombs.size < 25
           @bombs.push(Bomb.new)
         end
       else
@@ -251,7 +251,7 @@ class Coin
         @image = Gosu::Image.new("media2/coin.png")
         @x = @y = @velocity_x = @velocity_y = @angle = 0.0
         @x = rand * 640
-        @y = rand * 480
+        @y = 0
       end
       
 
